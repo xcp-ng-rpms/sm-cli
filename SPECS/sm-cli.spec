@@ -1,11 +1,11 @@
 Name:           sm-cli
-Version:        0.17.0
+Version:        0.18.0
 Release:        5%{?dist}
 Summary:        CLI for xapi toolstack storage managers
 License:        LGPL
 URL:            https://github.com/xapi-project/sm-cli
 Source0:        https://code.citrite.net/rest/archive/latest/projects/XSU/repos/%{name}/archive?at=v%{version}&format=tar.gz&prefix=%{name}-%{version}#/%{name}-%{version}.tar.gz
-Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.17.0&format=tar.gz&prefix=sm-cli-0.17.0#/sm-cli-0.17.0.tar.gz) = cf1cae018169b3a15b9160df48c2b5da6f901ce1
+Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.18.0&format=tar.gz&prefix=sm-cli-0.18.0#/sm-cli-0.18.0.tar.gz) = 59a97a66041c73eb6225a01a15c8f9ae54d0f496
 
 BuildRequires:  ocaml
 BuildRequires:  opam
@@ -31,6 +31,9 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Thu May 24 2018 Christian Lindig <christian.lindig@citrix.com> - 0.18.0-1
+- main: make safe-string compliant
+
 * Tue Feb 13 2018 Christian Lindig <christian.lindig@citrix.com> - 0.17.0-1
 - Update project URL to xapi-project github
 
