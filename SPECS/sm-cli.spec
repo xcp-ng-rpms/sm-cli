@@ -1,11 +1,15 @@
 Name:           sm-cli
-Version:        0.18.0
-Release:        5%{?dist}
+Version:        0.23.0
+Release:        1%{?dist}
 Summary:        CLI for xapi toolstack storage managers
 License:        LGPL
 URL:            https://github.com/xapi-project/sm-cli
-Source0:        https://code.citrite.net/rest/archive/latest/projects/XSU/repos/%{name}/archive?at=v%{version}&format=tar.gz&prefix=%{name}-%{version}#/%{name}-%{version}.tar.gz
-Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.18.0&format=tar.gz&prefix=sm-cli-0.18.0#/sm-cli-0.18.0.tar.gz) = 59a97a66041c73eb6225a01a15c8f9ae54d0f496
+
+Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.23.0&format=tar.gz&prefix=sm-cli-0.23.0#/sm-cli-0.23.0.tar.gz
+
+
+Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.23.0&format=tar.gz&prefix=sm-cli-0.23.0#/sm-cli-0.23.0.tar.gz) = 64c02f61fb502bc0798c29cc7867e68b745b2f48
+
 
 BuildRequires:  ocaml
 BuildRequires:  opam
@@ -31,6 +35,23 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Tue Dec 04 2018 Christian Lindig <christian.lindig@citrix.com> - 0.23.0-1
+- Moved from jbuilder to dune and deprecated xcp in favour of xapi-idl.
+
+* Thu Nov 01 2018 Christian Lindig <christian.lindig@citrix.com> - 0.22.0-1
+- Update opam for Opam 2, trim dependencies in opam file
+
+* Mon Oct 22 2018 Christian Lindig <christian.lindig@citrix.com> - 0.21.0-1
+- Fix Travis
+
+* Mon Sep 24 2018 Christian Lindig <christian.lindig@citrix.com> - 0.20.0-1
+- CP-27110: Convert to PPX storage interface
+- CP-27110: Reinstate sharable flag
+
+* Fri Aug 31 2018 Christian Lindig <christian.lindig@citrix.com> - 0.19.0-1
+- Simplify PPX processing in jbuild file
+- Update .travis.yml to use ocaml-ci-scripts
+
 * Thu May 24 2018 Christian Lindig <christian.lindig@citrix.com> - 0.18.0-1
 - main: make safe-string compliant
 
