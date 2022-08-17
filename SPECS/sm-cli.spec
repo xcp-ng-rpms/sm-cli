@@ -1,6 +1,6 @@
 Name:           sm-cli
 Version:        0.23.0
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        CLI for xapi toolstack storage managers
 License:        LGPL
 URL:            https://github.com/xapi-project/sm-cli
@@ -35,6 +35,9 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Wed Aug 17 2022 Gael Duperrey <gduperrey@vates.fr> - 0.23.0-7
+- Rebuild for updated ocaml-xcp-idl from XS82ECU1011
+
 * Mon Sep 27 2021 Pau Ruiz Safont <pau.safont@citrix.com> - 0.23.0-6
 - Bump package after xs-opam update
 
