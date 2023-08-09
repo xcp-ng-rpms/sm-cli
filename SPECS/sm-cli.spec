@@ -1,15 +1,12 @@
+%global package_speccommit 991f5c71b0207c29254f4415c1500db0f58b1adb
+%global package_srccommit v0.23.0
 Name:           sm-cli
-Version:        0.23.0
-Release:        6%{?dist}
+Version: 0.23.0
+Release: 53%{?xsrel}%{?dist}
 Summary:        CLI for xapi toolstack storage managers
-License:        LGPL
+License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 URL:            https://github.com/xapi-project/sm-cli
-
-Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.23.0&format=tar.gz&prefix=sm-cli-0.23.0#/sm-cli-0.23.0.tar.gz
-
-
-Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/sm-cli/archive?at=v0.23.0&format=tar.gz&prefix=sm-cli-0.23.0#/sm-cli-0.23.0.tar.gz) = 64c02f61fb502bc0798c29cc7867e68b745b2f48
-
+Source0: sm-cli-0.23.0.tar.gz
 
 BuildRequires:  ocaml
 BuildRequires:  opam
@@ -35,6 +32,27 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Thu Jul 20 2023 Rob Hoes <rob.hoes@citrix.com> - 0.23.0-53
+- Bump release and rebuild
+
+* Mon Jun 19 2023 Christian Lindig <christian.lindig@citrix.com> - 0.23.0-52
+- Bump release and rebuild
+
+* Thu Jun 08 2023 Christian Lindig <christian.lindig@citrix.com> - 0.23.0-51
+- Bump release and rebuild
+
+* Fri May 12 2023 Christian Lindig <christian.lindig@citrix.com> - 0.23.0-50
+- Bump release and rebuild
+
+* Fri May 12 2023 Christian Lindig <christian.lindig@citrix.com> - 0.23.0-49
+- Bump release and rebuild
+
+* Thu Feb 23 2023 Pau Ruiz Safont <pau.ruizsafont@cloud.com> - 0.23.0-48
+- Change license to match source repo
+
+* Mon Feb 20 2023 Pau Ruiz Safont <pau.ruizsafont@cloud.com> - 0.23.0-47
+- Bump package to avoid reusing versions from other versions
+
 * Mon Sep 27 2021 Pau Ruiz Safont <pau.safont@citrix.com> - 0.23.0-6
 - Bump package after xs-opam update
 
