@@ -1,8 +1,8 @@
-%global package_speccommit 1f37287eb6802544e88ceda4c759104dc71bf9d3
+%global package_speccommit 9a5b1a2126e4bf11a2f59ae46e374b6151531084
 %global package_srccommit v0.23.0
 Name:           sm-cli
 Version: 0.23.0
-Release: 54.1%{?xsrel}%{?dist}
+Release: 61.1%{?xsrel}%{?dist}
 Summary:        CLI for xapi toolstack storage managers
 License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 URL:            https://github.com/xapi-project/sm-cli
@@ -32,6 +32,24 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Mon Jun 03 2024 Gael Duperrey <gduperrey@vates.tech> - 0.23.0-61.1
+- Sync with hotfix XS82ECU1064
+- *** Upstream changelog ***
+- * Fri Mar 08 2024 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-61
+- - Bump release and rebuild
+- * Wed Mar 06 2024 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-60
+- - Bump release and rebuild
+- * Tue Mar 05 2024 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-59
+- - Bump release and rebuild
+- * Fri Nov 03 2023 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-58
+- - Bump release and rebuild
+- * Tue Oct 24 2023 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-57
+- - Bump release and rebuild
+- * Tue Oct 24 2023 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-56
+- - Bump release and rebuild
+- * Wed Oct 18 2023 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-55
+- - Bump release and rebuild
+
 * Fri Oct 13 2023 Samuel Verschelde <stormi-xcp@ylix.fr> - 0.23.0-54.1
 - Rebuild after sync with hotfix XS82ECU1049
 - No source changes: only rebuild for dependencies
