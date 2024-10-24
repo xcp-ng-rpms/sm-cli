@@ -1,8 +1,8 @@
-%global package_speccommit 9a5b1a2126e4bf11a2f59ae46e374b6151531084
+%global package_speccommit ed9da7a49ab5fe50b59bcb48aed32e163a4c8e5f
 %global package_srccommit v0.23.0
 Name:           sm-cli
 Version: 0.23.0
-Release: 61.1%{?xsrel}%{?dist}
+Release: 63.1%{?xsrel}%{?dist}
 Summary:        CLI for xapi toolstack storage managers
 License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 URL:            https://github.com/xapi-project/sm-cli
@@ -32,6 +32,15 @@ install _build/install/default/bin/sm-cli %{buildroot}/%{_sbindir}/sm-cli
 %{_sbindir}/sm-cli
 
 %changelog
+* Thu Oct 24 2024 Gael Duperrey <gduperrey@vates.tech> - 0.23.0-63.1
+- Rebuild after sync with hotfix XS82ECU1074
+- No source changes: only rebuild for dependencies
+- *** Upstream changelog ***
+- * Thu Aug 29 2024 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-63
+- - Bump release and rebuild
+- * Wed Jun 19 2024 Christian Lindig <christian.lindig@cloud.com> - 0.23.0-62
+- - Bump release and rebuild
+
 * Mon Jun 03 2024 Gael Duperrey <gduperrey@vates.tech> - 0.23.0-61.1
 - Sync with hotfix XS82ECU1064
 - *** Upstream changelog ***
